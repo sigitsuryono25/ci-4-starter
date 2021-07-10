@@ -13,12 +13,16 @@ class TbBerita extends Migration
 				'type' => "BIGINT",
 				'auto_increment' => true
 			],
+			'cover_berita' => [
+				'type' => 'VARCHAR',
+				'constraint' => 100
+			],
 			'judul_berita' => [
 				'type' => "VARCHAR",
 				'constraint' => 100
 			],
 			'isi' => [
-				'type' => "TEXT"
+				'type' => "LONGTEXT"
 			],
 			'slug' => [
 				'type' => "VARCHAR",

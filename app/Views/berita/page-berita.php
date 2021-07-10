@@ -36,7 +36,35 @@
                   </div>
               </div>
               <div class="card-body">
-
+                  <div class="table-responsive">
+                      <table class="table table-bordered table-sm">
+                          <thead>
+                              <tr>
+                                  <th>#</th>
+                                  <th>Judul Berita</th>
+                                  <th>Cover</th>
+                                  <th>Isi Berita</th>
+                                  <th>Tindakan</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <?php foreach ($berita as $key => $b) : ?>
+                                  <tr>
+                                      <td><?= $key + 1 ?></td>
+                                      <td><?= $b->judul_berita ?></td>
+                                      <td>
+                                          <img src="<?= base_url($b->cover_berita) ?>" alt=""  width="200">
+                                      </td>
+                                      <td><?= $b->isi ?></td>
+                                      <td>
+                                          <a href="#" class="btn btn-sm btn-warning btn-block">Edit</a>
+                                          <a href="#" class="btn btn-sm btn-danger btn-block">Hapus</a>
+                                      </td>
+                                  </tr>
+                              <?php endforeach ?>
+                          </tbody>
+                      </table>
+                  </div>
               </div>
               <!-- /.card-body -->
           </div>

@@ -12,6 +12,12 @@
   <link rel="stylesheet" href="<?= base_url() ?>/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= base_url() ?>/dist/css/adminlte.min.css">
+
+  <!-- jQuery -->
+  <script src="<?= base_url() ?>/plugins/jquery/jquery.min.js"></script>
+  <!-- SUMMERNOTE -->
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -95,13 +101,13 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="<?= site_url('berita')?>" class="nav-link">
+                  <a href="<?= site_url('berita') ?>" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Data Berita</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="<?= base_url() ?>/index2.html" class="nav-link">
+                  <a href="<?= site_url('form-berita') ?>" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Tambah Berita</p>
                   </a>
@@ -155,14 +161,19 @@
   </div>
   <!-- ./wrapper -->
 
-  <!-- jQuery -->
-  <script src="<?= base_url() ?>/plugins/jquery/jquery.min.js"></script>
   <!-- Bootstrap 4 -->
   <script src="<?= base_url() ?>/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- AdminLTE App -->
   <script src="<?= base_url() ?>/dist/js/adminlte.min.js"></script>
   <!-- AdminLTE for demo purposes -->
   <script src="<?= base_url() ?>/dist/js/demo.js"></script>
+
+  <script>
+    $(".summernote").summernote({
+      placeholder: "Tulis berita disini",
+      height: 250
+    });
+  </script>
 </body>
 
 </html>
